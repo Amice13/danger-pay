@@ -425,9 +425,9 @@ onMounted(() => {
     const disabledKey = (field + 'IsEnabled') as keyof EnabledFields
     enabledFields.value[disabledKey] = true
   }
-  const currentMonth = new Date().getMonth()
+  const previousMonth = new Date().getMonth()
   const currentYear = new Date().getFullYear() - (new Date().getMonth() === 0 ? 1 : 0)
-  mainData.value.month = `${String(currentYear)}-${String(currentMonth).padStart(2, '0')}`
+  mainData.value.month = `${String(currentYear)}-${String(previousMonth).padStart(2, '0')}`
 })
 
 const NATIONAL_PAY = 623/31
