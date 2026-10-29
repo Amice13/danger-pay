@@ -467,11 +467,11 @@ const reversedName = computed(() => {
 })
 
 const emails = {
-  'UKRDN, Dnipro, Ukraine': 'grechko@unhcr.org,ukrkipay@unhcr.org',
-  'UKRKH, Kharkiv, Ukraine': 'grechko@unhcr.org,ukrkipay@unhcr.org',
-  'UKRKI, Kyiv, Ukraine': 'savchenk@unhcr.org,ukrkipay@unhcr.org',
-  'UKRLV, Lviv, Ukraine': 'baryshev@unhcr.org,ukrkipay@unhcr.org',
-  'UKROD, Odesa, Ukraine': 'kupar@unhcr.org,ukrkipay@unhcr.org'
+  'UKRDN, Dnipro, Ukraine': 'grechko@unhcr.org;ukrkipay@unhcr.org',
+  'UKRKH, Kharkiv, Ukraine': 'grechko@unhcr.org;ukrkipay@unhcr.org',
+  'UKRKI, Kyiv, Ukraine': 'savchenk@unhcr.org;ukrkipay@unhcr.org',
+  'UKRLV, Lviv, Ukraine': 'baryshev@unhcr.org;ukrkipay@unhcr.org',
+  'UKROD, Odesa, Ukraine': 'kupar@unhcr.org;ukrkipay@unhcr.org'
 }
 
 const financeEmail = computed(() => emails[mainData.value.dutyStation as keyof typeof emails])
