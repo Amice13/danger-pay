@@ -154,7 +154,7 @@ const rows = computed(() => {
 const daysInMonth = computed<number>(() => {
   if (!props.month) return 31
   const [year, month] = props.month.split('-')
-  return new Date(Number(year), Number(month) - 1, 0).getDate()
+  return new Date(Number(year), Number(month), 0).getDate()
 })
 
 const designWidth = LABEL_WIDTH + daysInMonth.value * DAY_SIZE + TOTAL_WIDTH

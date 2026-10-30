@@ -402,7 +402,7 @@ const store = storage === null ? {} : JSON.parse(storage)
 const values = ref<string[]>([])
 
 function isCounted (days: string[], day: number): number {
-  const index = day - 1
+  const index = day
   if (days[index] === 'presence') return 1
   if (days[index] === 'mission') {
     const startIndex = index - 7 < 0 ? 0 : index - 7
@@ -435,6 +435,7 @@ const INTERNATIONAL_PAY = 1698/31
 
 const globalSum = computed<number>(() => {
   const total = [...Array(values.value.length).keys()].map(el => isCounted(values.value, el)).reduce((a, b) => a + b, 0)
+  console.log(values.value)
   const coefficient = mainData.value.staffType === 'International' ? INTERNATIONAL_PAY : NATIONAL_PAY
   return Math.round((coefficient * total) * 100) / 100
 })
